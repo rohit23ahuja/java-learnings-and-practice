@@ -1,8 +1,7 @@
 package com.java.practice.ModuloOperator;
 
 /**
- * Division operator return quotient in division. 
- * Modulo operator returns
+ * Division operator return quotient in division. Modulo operator returns
  * remainder of division.
  * 
  * @author rohitahuja
@@ -10,7 +9,7 @@ package com.java.practice.ModuloOperator;
  */
 public class ModuloAndDivisionOperator {
 	public static void main(String[] args) {
-        // division operator gives the quotient 
+		// division operator gives the quotient
 		System.out.println(11 / 4);
 		System.out.println(11 / 4.0);
 

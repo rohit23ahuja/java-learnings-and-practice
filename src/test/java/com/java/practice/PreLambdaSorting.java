@@ -14,8 +14,9 @@ public class PreLambdaSorting {
 
 	@Test
 	public void givenPreLambda_whenSortingBooksByTitle_thenCorrectlySorted() {
-		List<Book> books = Lists.newArrayList(new Book("Atomic Habits", "James Clear"), new Book("Make Time", "Jake Knapp"));
-		
+		List<Book> books = Lists.newArrayList(new Book("Atomic Habits", "James Clear"),
+				new Book("Make Time", "Jake Knapp"));
+
 		Collections.sort(books, new Comparator<Book>() {
 
 			@Override
@@ -23,7 +24,7 @@ public class PreLambdaSorting {
 				return o1.getTitle().compareTo(o2.getTitle());
 			}
 		});
-		
+
 		Assertions.assertEquals(new Book("Atomic Habits", "James Clear"), books.get(0));
 	}
 }

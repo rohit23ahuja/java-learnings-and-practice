@@ -13,8 +13,8 @@ import com.google.common.collect.Lists;
 import com.java.practice.model.Book;
 
 /**
- * Sorting List<Book> using Lambda expressions and Streams.
- * Also trying out new methods of Comparator interface.
+ * Sorting List<Book> using Lambda expressions and Streams. Also trying out new
+ * methods of Comparator interface.
  * 
  * @author rohitahuja
  *
@@ -103,13 +103,13 @@ public class BookSortingUsingLambdaAndStreams {
 
 		assertThrows(NullPointerException.class, () -> books.sort((b1, b2) -> b1.getTitle().compareTo(b2.getTitle())));
 	}
-	
+
 	@Test
 	public void givenANullItem_whenSortingBooksByTitle_thenMoveNullsToLast() {
 		List<Book> books = Lists.newArrayList(null, new Book("Obesity Code", "Jason Fung"), null);
-		
+
 		books.sort(Comparator.nullsLast(Comparator.comparing(Book::getTitle)));
-		
+
 		Assertions.assertEquals(new Book("Obesity Code", "Jason Fung"), books.get(0));
 		Assertions.assertNull(books.get(1));
 		Assertions.assertNull(books.get(2));
