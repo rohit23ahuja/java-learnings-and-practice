@@ -1,0 +1,31 @@
+What is Immutable class? 
+For different values of fields in the class different objects are created.
+any modification in the state of object results in a new instance creation.
+
+what are the benefits?
+Useful in multi thread environment and for caching
+simplicity - objects have one single state i.e. creation
+
+What are the disadvantages?
+we create a new object for each distinct value. this cost could be high in large objects.
+
+Solution for the above disadvantage? 
+Create a companion mutable class. Example - String and StringBuilder.
+
+Best practice?
+Classes should be made immutable unless you have a good reason to make them mutable. If you cannot make them immutable, reduce the mutability as much as possible.
+
+Create custom immutable class 
+	mark class as final
+		because you can make super call from sub class and this class's constructor.
+		you can do method overriding in sub class and define alternate behavior. And use sub class instances wherever immutable class instance are needed.
+	mark fields as final
+		this guarantees the field will only be instantiated at the time of construction of instance
+		compiler time error is given if final field is modified anywhere
+	no setter methods
+	always return new instance from methods which modify state of instance
+	for mutable fields
+		ensure to make cloned copy of the passed in argument in constructor and set your mutable field to this cloned copy.
+		ensure to return cloned copy of this field whenever needed
+	
+		
