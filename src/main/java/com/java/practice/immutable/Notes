@@ -17,8 +17,9 @@ Classes should be made immutable unless you have a good reason to make them muta
 
 Create custom immutable class 
 	mark class as final
-		because you can make super call from sub class and this class's constructor.
-		you can do method overriding in sub class and define alternate behavior. And use sub class instances wherever immutable class instance are needed.
+		this blocks class overriding.
+		without final you can make super call from sub class and call this class's constructor.
+		without final you can do method overriding in sub class and define alternate behavior. And use sub class instances wherever immutable class instance are needed.
 	mark fields as final
 		this guarantees the field will only be instantiated at the time of construction of instance
 		compiler time error is given if final field is modified anywhere
