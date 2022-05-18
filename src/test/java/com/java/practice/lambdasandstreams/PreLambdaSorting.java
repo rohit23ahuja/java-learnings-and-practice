@@ -1,4 +1,4 @@
-package com.java.practice;
+package com.java.practice.lambdasandstreams;
 
 import java.util.Collections;
 import java.util.Comparator;

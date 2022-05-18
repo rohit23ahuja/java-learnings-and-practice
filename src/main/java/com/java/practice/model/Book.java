@@ -28,6 +28,13 @@ public class Book {
 		this.author = author;
 	}
 
+	public Book(String title, String author, Integer price) {
+		this.title = title;
+		this.author = author;
+		this.price = price;
+	}
+	
+	
 	public boolean equals(Object o2) {
 		if (this == o2) {
 			return true;
@@ -61,4 +68,5 @@ public class Book {
 			return b1.getTitle().compareTo(b2.getTitle());
 		}
 	}
+
 }

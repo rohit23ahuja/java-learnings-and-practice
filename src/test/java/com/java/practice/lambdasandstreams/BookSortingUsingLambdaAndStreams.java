@@ -1,4 +1,4 @@
-package com.java.practice;
+package com.java.practice.lambdasandstreams;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -113,5 +113,24 @@ public class BookSortingUsingLambdaAndStreams {
 		Assertions.assertEquals(new Book("Obesity Code", "Jason Fung"), books.get(0));
 		Assertions.assertNull(books.get(1));
 		Assertions.assertNull(books.get(2));
+	}
+	
+	@Test
+	public void whenSortingBooksByIncreasingPrice_thenCorrectlySorted() {
+		List<Book> books = Lists.newArrayList(new Book("Make Time", "Jake Knapp", 600),
+				new Book("Atomic Habits", "James Clear", 500), new Book("Obesity Code", "Jason Fung", 400));
+
+		books.sort((b1, b2) -> {
+			if (b1.getPrice() < b2.getPrice()) {
+				return -1;
+			} else if (b1.getPrice() > b2.getPrice()) {
+				return 1;
+			} else {
+				return 0;
+			}
+		});
+		Assertions.assertEquals(books.get(0).getPrice(), 400);
+		Assertions.assertEquals(books.get(1).getPrice(), 500);
+		Assertions.assertEquals(books.get(2).getPrice(), 600);
 	}
 }

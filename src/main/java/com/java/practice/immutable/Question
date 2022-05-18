@@ -1,0 +1,24 @@
+public class Employee {
+	public String name;
+	public Address employeeAddress;
+}	
+public class Address {
+	public String house;
+	public String city;
+	
+	public String getHouse() {
+		return house;
+	}
+
+	public void setHouse(String house) {
+		this.house = house;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+}
