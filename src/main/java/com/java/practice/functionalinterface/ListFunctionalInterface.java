@@ -1,4 +1,4 @@
-package com.java.practive.functionalinterface;
+package com.java.practice.functionalinterface;
 
 import java.util.List;
 

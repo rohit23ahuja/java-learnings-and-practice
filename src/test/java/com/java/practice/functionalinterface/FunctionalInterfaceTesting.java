@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 
 import com.google.common.collect.Lists;
 import com.java.practice.model.Book;
-import com.java.practive.functionalinterface.ListFunctionalInterface;
 
 import lombok.extern.slf4j.Slf4j;
 
