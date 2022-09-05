@@ -32,8 +32,10 @@ public class ModuloAndDivisionOperator {
 		// when dividend < divisor. dividend is returned.
 		// when dividend == divisor zero
 		// dividend > divisor. remainder is returned
+		// j is dividend
+		// 5 is divisor
 		for (int j = 0; j < 100; j++) {
-			log.info("{}",j % 5);
+			log.info("Remainder [{}] Quotient [{}]",j % 5, j/5);
 		}
 	}
 
