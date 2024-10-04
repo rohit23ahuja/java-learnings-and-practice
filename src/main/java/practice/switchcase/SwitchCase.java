@@ -4,11 +4,11 @@ public class SwitchCase {
 
     public String getShortCode(String status) {
         if (null == status) return "U";
-        return switch (status) {
-            case "Petrol" -> "P";
-            case "Diesel" -> "D";
-            case "Electic" -> "E";
-            case "Cng" -> "C";
+        return switch (status.toLowerCase()) {
+            case "petrol" -> "P";
+            case "diesel" -> "D";
+            case "electic" -> "E";
+            case "cng" -> "C";
             default -> "U";
         };
     }
