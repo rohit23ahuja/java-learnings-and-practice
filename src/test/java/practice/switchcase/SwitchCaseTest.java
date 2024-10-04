@@ -22,6 +22,15 @@ public class SwitchCaseTest {
         String o = s.getShortCode(i);
         assertEquals("D", o);
     }
+    
+    @Test
+    public void whenArgumentMixedCase_thenReturnShortCode() {
+        SwitchCase s = new SwitchCase();
+        String i = "petRoL";
+        String o = s.getShortCode(i);
+        assertEquals("P", o);
+    }
+
 
     @Test
     public void whenArgumentInvalidValue_thenReturnShortCode() {
@@ -54,13 +63,4 @@ public class SwitchCaseTest {
         String o = s.getShortCode(i);
         assertEquals("U", o);
     }
-
-    @Test
-    public void whenArgumentInvalidCase_thenReturnShortCode() {
-        SwitchCase s = new SwitchCase();
-        String i = "petRol";
-        String o = s.getShortCode(i);
-        assertEquals("U", o);
-    }
-
 }
