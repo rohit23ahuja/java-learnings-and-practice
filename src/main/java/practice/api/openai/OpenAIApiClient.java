@@ -29,6 +29,6 @@ public class OpenAIApiClient {
                 .model(ChatModel.GPT_4O_MINI)
                 .build();
         ChatCompletion chatCompletion = client.chat().completions().create(params);
-        
+        System.out.println(""+chatCompletion.toString());
     }
 }
