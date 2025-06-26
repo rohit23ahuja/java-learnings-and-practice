@@ -1,4 +1,4 @@
-package pratice.records;
+package practice.records;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
