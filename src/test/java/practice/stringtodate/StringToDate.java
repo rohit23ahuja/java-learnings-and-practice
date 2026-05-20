@@ -2,6 +2,7 @@ package practice.stringtodate;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -31,10 +32,23 @@ public class StringToDate {
 		String fileName = "Dec2025_Billedstatements_7193_24-12-25_21-39.xls";
 		String monthYearString = fileName.substring(0, 7);
 		Assertions.assertEquals("Dec2025", monthYearString);
-		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MMMyyyy");
+		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MMMyyyy", Locale.ENGLISH);
 		YearMonth parsedYearMonth = YearMonth.parse(monthYearString, dateTimeFormatter);
 
 		Assertions.assertEquals(Month.DECEMBER, parsedYearMonth.getMonth());
+		Assertions.assertEquals(2025, parsedYearMonth.getYear());
+
+	}
+
+	@Test
+	public void givenFileNameString_ThenParseSepMonth2025Year() {
+		String fileName = "Sep2025_Billedstatements_7193_19-05-26_22-01.xls";
+		String monthYearString = fileName.substring(0, 7);
+		Assertions.assertEquals("Sep2025", monthYearString);
+		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MMMyyyy", Locale.ENGLISH);
+		YearMonth parsedYearMonth = YearMonth.parse(monthYearString, dateTimeFormatter);
+
+		Assertions.assertEquals(Month.SEPTEMBER, parsedYearMonth.getMonth());
 		Assertions.assertEquals(2025, parsedYearMonth.getYear());
 
 	}
